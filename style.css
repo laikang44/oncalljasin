@@ -92,7 +92,10 @@ table, th, td {
 }
 
 th, td {
-  padding: 0.3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
   text-align: center;
 }
 
