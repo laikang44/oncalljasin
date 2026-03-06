@@ -54,6 +54,55 @@ th, td {
   width: 80%
 }
 
+@media screen and (min-width: 600px) {
+  h1 {
+  font-size: 2.5rem;
+  position: relative;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#notes {
+  font-size: 1.2rem;
+  text-align: center;
+  color: red;
+  position: sticky;
+  top: 0;
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+}
+
+#head {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+button {
+    width: 70%;
+    height: 2.5rem;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+th, td {
+  padding: 0.3rem;
+  text-align: center;
+}
+
+#table1, #table2, #table3 {
+  margin-left: auto; 
+  margin-right: auto;
+  width: 80%
+}
+}
+
 #officialdate1, #officialdate2, #officialdate3, #officialdate4, #officialdate5, #officialdate6, #officialdate7, #officialdate8,#officialdate9, #officialdate10,_
 #tentativedate1, #tentativedate2, #tentativedate3, #tentativedate4, #tentativedate5, #tentativedate6, #tentativedate7, #tentativedate8,#tentativedate9, #tentativedate10,_
 #futuredate1, #futuredate2, #futuredate3, #futuredate4, #futuredate5, #futuredate6, #futuredate7, #futuredate8,#futuredate9, #futuredate10 {
