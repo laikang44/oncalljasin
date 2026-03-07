@@ -235,6 +235,66 @@
         <td id="futuredsa10" class="futuredsaresult10"></td>
         <td id="futuretag10" class="futuredatetag10"></td>
       </tr>
+      <tr id="futurerow11">
+        <td id="futuredate11" class="futuredateresult11"></td>
+        <td id="futureofficer11" class="futureofficerresult11"></td>
+        <td id="futuredsa11" class="futuredsaresult11"></td>
+        <td id="futuretag11" class="futuredatetag11"></td>
+      </tr>
+      <tr id="futurerow12">
+        <td id="futuredate12" class="futuredateresult12"></td>
+        <td id="futureofficer12" class="futureofficerresult12"></td>
+        <td id="futuredsa12" class="futuredsaresult12"></td>
+        <td id="futuretag12" class="futuredatetag12"></td>
+      </tr>
+      <tr id="futurerow13">
+        <td id="futuredate13" class="futuredateresult13"></td>
+        <td id="futureofficer13" class="futureofficerresult13"></td>
+        <td id="futuredsa13" class="futuredsaresult13"></td>
+        <td id="futuretag13" class="futuredatetag13"></td>
+      </tr>
+      <tr id="futurerow14">
+        <td id="futuredate14" class="futuredateresult14"></td>
+        <td id="futureofficer14" class="futureofficerresult14"></td>
+        <td id="futuredsa14" class="futuredsaresult14"></td>
+        <td id="futuretag14" class="futuredatetag14"></td>
+      </tr>
+      <tr id="futurerow15">
+        <td id="futuredate15" class="futuredateresult15"></td>
+        <td id="futureofficer15" class="futureofficerresult15"></td>
+        <td id="futuredsa15" class="futuredsaresult15"></td>
+        <td id="futuretag15" class="futuredatetag15"></td>
+      </tr>
+      <tr id="futurerow16">
+        <td id="futuredate16" class="futuredateresult16"></td>
+        <td id="futureofficer16" class="futureofficerresult16"></td>
+        <td id="futuredsa16" class="futuredsaresult16"></td>
+        <td id="futuretag16" class="futuredatetag16"></td>
+      </tr>
+      <tr id="futurerow17">
+        <td id="futuredate17" class="futuredateresult17"></td>
+        <td id="futureofficer17" class="futureofficerresult17"></td>
+        <td id="futuredsa17" class="futuredsaresult17"></td>
+        <td id="futuretag17" class="futuredatetag17"></td>
+      </tr>
+      <tr id="futurerow18">
+        <td id="futuredate18" class="futuredateresult18"></td>
+        <td id="futureofficer18" class="futureofficerresult18"></td>
+        <td id="futuredsa18" class="futuredsaresult18"></td>
+        <td id="futuretag18" class="futuredatetag18"></td>
+      </tr>
+      <tr id="futurerow19">
+        <td id="futuredate19" class="futuredateresult19"></td>
+        <td id="futureofficer19" class="futureofficerresult19"></td>
+        <td id="futuredsa19" class="futuredsaresult19"></td>
+        <td id="futuretag19" class="futuredatetag19"></td>
+      </tr>
+      <tr id="futurerow20">
+        <td id="futuredate20" class="futuredateresult20"></td>
+        <td id="futureofficer20" class="futureofficerresult20"></td>
+        <td id="futuredsa20" class="futuredsaresult20"></td>
+        <td id="futuretag20" class="futuredatetag20"></td>
+      </tr>
     </table>
         
   </body>
@@ -343,202 +403,88 @@
 
   fetch(url1)
    .then(result=>result.text())
-   .then(csvtext=>officialdate1.innerHTML=csvtext.substring(getPosition(csvtext,",",5)+1,getPosition(csvtext,",",6)));
- 
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialofficer1.innerHTML=csvtext.substring(getPosition(csvtext,",",6)+1,getPosition(csvtext,",",7)));
+   .then(function(csvtext){
 
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialdsa1.innerHTML=csvtext.substring(getPosition(csvtext,",",7)+1,getPosition(csvtext,",",8)));
-
-  fetch(url1)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",8)+1,getPosition(csvtext,",",9)) === "") {
+    officialdate1.innerHTML=csvtext.substring(getPosition(csvtext,",",5)+1,getPosition(csvtext,",",6));
+    officialofficer1.innerHTML=csvtext.substring(getPosition(csvtext,",",6)+1,getPosition(csvtext,",",7));
+    officialdsa1.innerHTML=csvtext.substring(getPosition(csvtext,",",7)+1,getPosition(csvtext,",",8));
+    if(csvtext.substring(getPosition(csvtext,",",8)+1,getPosition(csvtext,",",9)) === "") {
     officialrow1.style.display = "none"; }
     else {
-    officialtag1.innerHTML=csvtext.substring(getPosition(csvtext,",",8)+1,getPosition(csvtext,",",9)); }
-   });
+    officialtag1.innerHTML=csvtext.substring(getPosition(csvtext,",",8)+1,getPosition(csvtext,",",9)); };
 
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialdate2.innerHTML=csvtext.substring(getPosition(csvtext,",",9)+1,getPosition(csvtext,",",10)));
- 
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialofficer2.innerHTML=csvtext.substring(getPosition(csvtext,",",10)+1,getPosition(csvtext,",",11)));
-
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialdsa2.innerHTML=csvtext.substring(getPosition(csvtext,",",11)+1,getPosition(csvtext,",",12)));
-
-  fetch(url1)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",12)+1,getPosition(csvtext,",",13)) === "") {
+    officialdate2.innerHTML=csvtext.substring(getPosition(csvtext,",",9)+1,getPosition(csvtext,",",10));
+    officialofficer2.innerHTML=csvtext.substring(getPosition(csvtext,",",10)+1,getPosition(csvtext,",",11));
+    officialdsa2.innerHTML=csvtext.substring(getPosition(csvtext,",",11)+1,getPosition(csvtext,",",12));
+    if(csvtext.substring(getPosition(csvtext,",",12)+1,getPosition(csvtext,",",13)) === "") {
     officialrow2.style.display = "none"; }
     else {
-    officialtag2.innerHTML=csvtext.substring(getPosition(csvtext,",",12)+1,getPosition(csvtext,",",13)); }
-   });
+    officialtag2.innerHTML=csvtext.substring(getPosition(csvtext,",",12)+1,getPosition(csvtext,",",13)); };
 
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialdate3.innerHTML=csvtext.substring(getPosition(csvtext,",",13)+1,getPosition(csvtext,",",14)));
- 
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialofficer3.innerHTML=csvtext.substring(getPosition(csvtext,",",14)+1,getPosition(csvtext,",",15)));
-
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialdsa3.innerHTML=csvtext.substring(getPosition(csvtext,",",15)+1,getPosition(csvtext,",",16)));
-
-  fetch(url1)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",16)+1,getPosition(csvtext,",",17)) === "") {
+    officialdate3.innerHTML=csvtext.substring(getPosition(csvtext,",",13)+1,getPosition(csvtext,",",14));
+    officialofficer3.innerHTML=csvtext.substring(getPosition(csvtext,",",14)+1,getPosition(csvtext,",",15));
+    officialdsa3.innerHTML=csvtext.substring(getPosition(csvtext,",",15)+1,getPosition(csvtext,",",16));
+    if(csvtext.substring(getPosition(csvtext,",",16)+1,getPosition(csvtext,",",17)) === "") {
     officialrow3.style.display = "none"; }
     else {
-    officialtag3.innerHTML=csvtext.substring(getPosition(csvtext,",",16)+1,getPosition(csvtext,",",17)); }
-   });
+    officialtag3.innerHTML=csvtext.substring(getPosition(csvtext,",",16)+1,getPosition(csvtext,",",17)); };
 
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialdate4.innerHTML=csvtext.substring(getPosition(csvtext,",",17)+1,getPosition(csvtext,",",18)));
- 
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialofficer4.innerHTML=csvtext.substring(getPosition(csvtext,",",18)+1,getPosition(csvtext,",",19)));
-
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialdsa4.innerHTML=csvtext.substring(getPosition(csvtext,",",19)+1,getPosition(csvtext,",",20)));
-
-  fetch(url1)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",20)+1,getPosition(csvtext,",",21)) === "") {
+    officialdate4.innerHTML=csvtext.substring(getPosition(csvtext,",",17)+1,getPosition(csvtext,",",18));
+    officialofficer4.innerHTML=csvtext.substring(getPosition(csvtext,",",18)+1,getPosition(csvtext,",",19));
+    officialdsa4.innerHTML=csvtext.substring(getPosition(csvtext,",",19)+1,getPosition(csvtext,",",20));
+    if(csvtext.substring(getPosition(csvtext,",",20)+1,getPosition(csvtext,",",21)) === "") {
     officialrow4.style.display = "none"; }
     else {
-    officialtag4.innerHTML=csvtext.substring(getPosition(csvtext,",",20)+1,getPosition(csvtext,",",21)); }
-   });
+    officialtag4.innerHTML=csvtext.substring(getPosition(csvtext,",",20)+1,getPosition(csvtext,",",21)); };
 
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialdate5.innerHTML=csvtext.substring(getPosition(csvtext,",",21)+1,getPosition(csvtext,",",22)));
- 
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialofficer5.innerHTML=csvtext.substring(getPosition(csvtext,",",22)+1,getPosition(csvtext,",",23)));
-
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialdsa5.innerHTML=csvtext.substring(getPosition(csvtext,",",23)+1,getPosition(csvtext,",",24)));
-
-  fetch(url1)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",24)+1,getPosition(csvtext,",",25)) === "") {
+    officialdate5.innerHTML=csvtext.substring(getPosition(csvtext,",",21)+1,getPosition(csvtext,",",22));
+    officialofficer5.innerHTML=csvtext.substring(getPosition(csvtext,",",22)+1,getPosition(csvtext,",",23));
+    officialdsa5.innerHTML=csvtext.substring(getPosition(csvtext,",",23)+1,getPosition(csvtext,",",24));
+    if(csvtext.substring(getPosition(csvtext,",",24)+1,getPosition(csvtext,",",25)) === "") {
     officialrow5.style.display = "none"; }
     else {
-    officialtag5.innerHTML=csvtext.substring(getPosition(csvtext,",",24)+1,getPosition(csvtext,",",25)); }
-   });
+    officialtag5.innerHTML=csvtext.substring(getPosition(csvtext,",",24)+1,getPosition(csvtext,",",25)); };
 
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialdate6.innerHTML=csvtext.substring(getPosition(csvtext,",",25)+1,getPosition(csvtext,",",26)));
- 
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialofficer6.innerHTML=csvtext.substring(getPosition(csvtext,",",26)+1,getPosition(csvtext,",",27)));
-
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialdsa6.innerHTML=csvtext.substring(getPosition(csvtext,",",27)+1,getPosition(csvtext,",",28)));
-
-  fetch(url1)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",28)+1,getPosition(csvtext,",",29)) === "") {
+    officialdate6.innerHTML=csvtext.substring(getPosition(csvtext,",",25)+1,getPosition(csvtext,",",26));
+    officialofficer6.innerHTML=csvtext.substring(getPosition(csvtext,",",26)+1,getPosition(csvtext,",",27));
+    officialdsa6.innerHTML=csvtext.substring(getPosition(csvtext,",",27)+1,getPosition(csvtext,",",28));
+    if(csvtext.substring(getPosition(csvtext,",",28)+1,getPosition(csvtext,",",29)) === "") {
     officialrow6.style.display = "none"; }
     else {
-    officialtag6.innerHTML=csvtext.substring(getPosition(csvtext,",",28)+1,getPosition(csvtext,",",29)); }
-   });
+    officialtag6.innerHTML=csvtext.substring(getPosition(csvtext,",",28)+1,getPosition(csvtext,",",29)); };
 
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialdate7.innerHTML=csvtext.substring(getPosition(csvtext,",",29)+1,getPosition(csvtext,",",30)));
- 
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialofficer7.innerHTML=csvtext.substring(getPosition(csvtext,",",30)+1,getPosition(csvtext,",",31)));
-
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialdsa7.innerHTML=csvtext.substring(getPosition(csvtext,",",31)+1,getPosition(csvtext,",",32)));
-
-  fetch(url1)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",32)+1,getPosition(csvtext,",",33)) === "") {
+    officialdate7.innerHTML=csvtext.substring(getPosition(csvtext,",",29)+1,getPosition(csvtext,",",30));
+    officialofficer7.innerHTML=csvtext.substring(getPosition(csvtext,",",30)+1,getPosition(csvtext,",",31));
+    officialdsa7.innerHTML=csvtext.substring(getPosition(csvtext,",",31)+1,getPosition(csvtext,",",32));
+    if(csvtext.substring(getPosition(csvtext,",",32)+1,getPosition(csvtext,",",33)) === "") {
     officialrow7.style.display = "none"; }
     else {
-    officialtag7.innerHTML=csvtext.substring(getPosition(csvtext,",",32)+1,getPosition(csvtext,",",33)); }
-   });
+    officialtag7.innerHTML=csvtext.substring(getPosition(csvtext,",",32)+1,getPosition(csvtext,",",33)); };
 
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialdate8.innerHTML=csvtext.substring(getPosition(csvtext,",",33)+1,getPosition(csvtext,",",34)));
- 
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialofficer8.innerHTML=csvtext.substring(getPosition(csvtext,",",34)+1,getPosition(csvtext,",",35)));
-
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialdsa8.innerHTML=csvtext.substring(getPosition(csvtext,",",35)+1,getPosition(csvtext,",",36)));
-
-  fetch(url1)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",36)+1,getPosition(csvtext,",",37)) === "") {
+    officialdate8.innerHTML=csvtext.substring(getPosition(csvtext,",",33)+1,getPosition(csvtext,",",34));
+    officialofficer8.innerHTML=csvtext.substring(getPosition(csvtext,",",34)+1,getPosition(csvtext,",",35));
+    officialdsa8.innerHTML=csvtext.substring(getPosition(csvtext,",",35)+1,getPosition(csvtext,",",36));
+    if(csvtext.substring(getPosition(csvtext,",",36)+1,getPosition(csvtext,",",37)) === "") {
     officialrow8.style.display = "none"; }
     else {
-    officialtag8.innerHTML=csvtext.substring(getPosition(csvtext,",",36)+1,getPosition(csvtext,",",37)); }
-   });
+    officialtag8.innerHTML=csvtext.substring(getPosition(csvtext,",",36)+1,getPosition(csvtext,",",37)); };
 
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialdate9.innerHTML=csvtext.substring(getPosition(csvtext,",",37)+1,getPosition(csvtext,",",38)));
- 
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialofficer9.innerHTML=csvtext.substring(getPosition(csvtext,",",38)+1,getPosition(csvtext,",",39)));
-
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialdsa9.innerHTML=csvtext.substring(getPosition(csvtext,",",39)+1,getPosition(csvtext,",",40)));
-
-  fetch(url1)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",40)+1,getPosition(csvtext,",",41)) === "") {
+    officialdate9.innerHTML=csvtext.substring(getPosition(csvtext,",",37)+1,getPosition(csvtext,",",38));
+    officialofficer9.innerHTML=csvtext.substring(getPosition(csvtext,",",38)+1,getPosition(csvtext,",",39));
+    officialdsa9.innerHTML=csvtext.substring(getPosition(csvtext,",",39)+1,getPosition(csvtext,",",40));
+    if(csvtext.substring(getPosition(csvtext,",",40)+1,getPosition(csvtext,",",41)) === "") {
     officialrow9.style.display = "none"; }
     else {
-    officialtag9.innerHTML=csvtext.substring(getPosition(csvtext,",",40)+1,getPosition(csvtext,",",41)); }
-   });
+    officialtag9.innerHTML=csvtext.substring(getPosition(csvtext,",",40)+1,getPosition(csvtext,",",41)); };
 
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialdate10.innerHTML=csvtext.substring(getPosition(csvtext,",",41)+1,getPosition(csvtext,",",42)));
-  
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialofficer10.innerHTML=csvtext.substring(getPosition(csvtext,",",42)+1,getPosition(csvtext,",",43)));
-
-  fetch(url1)
-   .then(result=>result.text())
-   .then(csvtext=>officialdsa10.innerHTML=csvtext.substring(getPosition(csvtext,",",43)+1,getPosition(csvtext,",",44)));
-
-  fetch(url1)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",44)+1,getPosition(csvtext,",",45)) === "") {
+    officialdate10.innerHTML=csvtext.substring(getPosition(csvtext,",",41)+1,getPosition(csvtext,",",42));
+    officialofficer10.innerHTML=csvtext.substring(getPosition(csvtext,",",42)+1,getPosition(csvtext,",",43));
+    officialdsa10.innerHTML=csvtext.substring(getPosition(csvtext,",",43)+1,getPosition(csvtext,",",44));
+    if(csvtext.substring(getPosition(csvtext,",",44)+1,getPosition(csvtext,",",45)) === "") {
     officialrow10.style.display = "none"; }
     else {
-    officialtag10.innerHTML=csvtext.substring(getPosition(csvtext,",",44)+1,getPosition(csvtext,",",45)); }
+    officialtag10.innerHTML=csvtext.substring(getPosition(csvtext,",",44)+1,getPosition(csvtext,",",45)); };
+
    });
 
   const tentativedate1 = document.querySelector("#tentativedate1");
@@ -634,202 +580,88 @@
 
   fetch(url2)
    .then(result=>result.text())
-   .then(csvtext=>tentativedate1.innerHTML=csvtext.substring(getPosition(csvtext,",",5)+1,getPosition(csvtext,",",6)));
- 
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativeofficer1.innerHTML=csvtext.substring(getPosition(csvtext,",",6)+1,getPosition(csvtext,",",7)));
+   .then(function(csvtext){
 
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativedsa1.innerHTML=csvtext.substring(getPosition(csvtext,",",7)+1,getPosition(csvtext,",",8)));
-
-  fetch(url2)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",8)+1,getPosition(csvtext,",",9)) === "") {
+    tentativedate1.innerHTML=csvtext.substring(getPosition(csvtext,",",5)+1,getPosition(csvtext,",",6));
+    tentativeofficer1.innerHTML=csvtext.substring(getPosition(csvtext,",",6)+1,getPosition(csvtext,",",7));
+    tentativedsa1.innerHTML=csvtext.substring(getPosition(csvtext,",",7)+1,getPosition(csvtext,",",8));
+    if(csvtext.substring(getPosition(csvtext,",",8)+1,getPosition(csvtext,",",9)) === "") {
     tentativerow1.style.display = "none"; }
     else {
-    tentativetag1.innerHTML=csvtext.substring(getPosition(csvtext,",",8)+1,getPosition(csvtext,",",9)); }
-   });
+    tentativetag1.innerHTML=csvtext.substring(getPosition(csvtext,",",8)+1,getPosition(csvtext,",",9)); };
 
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativedate2.innerHTML=csvtext.substring(getPosition(csvtext,",",9)+1,getPosition(csvtext,",",10)));
- 
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativeofficer2.innerHTML=csvtext.substring(getPosition(csvtext,",",10)+1,getPosition(csvtext,",",11)));
-
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativedsa2.innerHTML=csvtext.substring(getPosition(csvtext,",",11)+1,getPosition(csvtext,",",12)));
-
-  fetch(url2)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",12)+1,getPosition(csvtext,",",13)) === "") {
+    tentativedate2.innerHTML=csvtext.substring(getPosition(csvtext,",",9)+1,getPosition(csvtext,",",10));
+    tentativeofficer2.innerHTML=csvtext.substring(getPosition(csvtext,",",10)+1,getPosition(csvtext,",",11));
+    tentativedsa2.innerHTML=csvtext.substring(getPosition(csvtext,",",11)+1,getPosition(csvtext,",",12));
+    if(csvtext.substring(getPosition(csvtext,",",12)+1,getPosition(csvtext,",",13)) === "") {
     tentativerow2.style.display = "none"; }
     else {
-    tentativetag2.innerHTML=csvtext.substring(getPosition(csvtext,",",12)+1,getPosition(csvtext,",",13)); }
-   });
+    tentativetag2.innerHTML=csvtext.substring(getPosition(csvtext,",",12)+1,getPosition(csvtext,",",13)); };
 
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativedate3.innerHTML=csvtext.substring(getPosition(csvtext,",",13)+1,getPosition(csvtext,",",14)));
- 
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativeofficer3.innerHTML=csvtext.substring(getPosition(csvtext,",",14)+1,getPosition(csvtext,",",15)));
-
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativedsa3.innerHTML=csvtext.substring(getPosition(csvtext,",",15)+1,getPosition(csvtext,",",16)));
-
-  fetch(url2)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",16)+1,getPosition(csvtext,",",17)) === "") {
+    tentativedate3.innerHTML=csvtext.substring(getPosition(csvtext,",",13)+1,getPosition(csvtext,",",14));
+    tentativeofficer3.innerHTML=csvtext.substring(getPosition(csvtext,",",14)+1,getPosition(csvtext,",",15));
+    tentativedsa3.innerHTML=csvtext.substring(getPosition(csvtext,",",15)+1,getPosition(csvtext,",",16));
+    if(csvtext.substring(getPosition(csvtext,",",16)+1,getPosition(csvtext,",",17)) === "") {
     tentativerow3.style.display = "none"; }
     else {
-    tentativetag3.innerHTML=csvtext.substring(getPosition(csvtext,",",16)+1,getPosition(csvtext,",",17)); }
-   });
+    tentativetag3.innerHTML=csvtext.substring(getPosition(csvtext,",",16)+1,getPosition(csvtext,",",17)); };
 
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativedate4.innerHTML=csvtext.substring(getPosition(csvtext,",",17)+1,getPosition(csvtext,",",18)));
- 
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativeofficer4.innerHTML=csvtext.substring(getPosition(csvtext,",",18)+1,getPosition(csvtext,",",19)));
-
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativedsa4.innerHTML=csvtext.substring(getPosition(csvtext,",",19)+1,getPosition(csvtext,",",20)));
-
-  fetch(url2)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",20)+1,getPosition(csvtext,",",21)) === "") {
+    tentativedate4.innerHTML=csvtext.substring(getPosition(csvtext,",",17)+1,getPosition(csvtext,",",18));
+    tentativeofficer4.innerHTML=csvtext.substring(getPosition(csvtext,",",18)+1,getPosition(csvtext,",",19));
+    tentativedsa4.innerHTML=csvtext.substring(getPosition(csvtext,",",19)+1,getPosition(csvtext,",",20));
+    if(csvtext.substring(getPosition(csvtext,",",20)+1,getPosition(csvtext,",",21)) === "") {
     tentativerow4.style.display = "none"; }
     else {
-    tentativetag4.innerHTML=csvtext.substring(getPosition(csvtext,",",20)+1,getPosition(csvtext,",",21)); }
-   });
+    tentativetag4.innerHTML=csvtext.substring(getPosition(csvtext,",",20)+1,getPosition(csvtext,",",21)); };
 
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativedate5.innerHTML=csvtext.substring(getPosition(csvtext,",",21)+1,getPosition(csvtext,",",22)));
- 
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativeofficer5.innerHTML=csvtext.substring(getPosition(csvtext,",",22)+1,getPosition(csvtext,",",23)));
-
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativedsa5.innerHTML=csvtext.substring(getPosition(csvtext,",",23)+1,getPosition(csvtext,",",24)));
-
-  fetch(url2)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",24)+1,getPosition(csvtext,",",25)) === "") {
+    tentativedate5.innerHTML=csvtext.substring(getPosition(csvtext,",",21)+1,getPosition(csvtext,",",22));
+    tentativeofficer5.innerHTML=csvtext.substring(getPosition(csvtext,",",22)+1,getPosition(csvtext,",",23));
+    tentativedsa5.innerHTML=csvtext.substring(getPosition(csvtext,",",23)+1,getPosition(csvtext,",",24));
+    if(csvtext.substring(getPosition(csvtext,",",24)+1,getPosition(csvtext,",",25)) === "") {
     tentativerow5.style.display = "none"; }
     else {
-    tentativetag5.innerHTML=csvtext.substring(getPosition(csvtext,",",24)+1,getPosition(csvtext,",",25)); }
-   });
+    tentativetag5.innerHTML=csvtext.substring(getPosition(csvtext,",",24)+1,getPosition(csvtext,",",25)); };
 
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativedate6.innerHTML=csvtext.substring(getPosition(csvtext,",",25)+1,getPosition(csvtext,",",26)));
- 
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativeofficer6.innerHTML=csvtext.substring(getPosition(csvtext,",",26)+1,getPosition(csvtext,",",27)));
-
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativedsa6.innerHTML=csvtext.substring(getPosition(csvtext,",",27)+1,getPosition(csvtext,",",28)));
-
-  fetch(url2)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",28)+1,getPosition(csvtext,",",29)) === "") {
+    tentativedate6.innerHTML=csvtext.substring(getPosition(csvtext,",",25)+1,getPosition(csvtext,",",26));
+    tentativeofficer6.innerHTML=csvtext.substring(getPosition(csvtext,",",26)+1,getPosition(csvtext,",",27));
+    tentativedsa6.innerHTML=csvtext.substring(getPosition(csvtext,",",27)+1,getPosition(csvtext,",",28));
+    if(csvtext.substring(getPosition(csvtext,",",28)+1,getPosition(csvtext,",",29)) === "") {
     tentativerow6.style.display = "none"; }
     else {
-    tentativetag6.innerHTML=csvtext.substring(getPosition(csvtext,",",28)+1,getPosition(csvtext,",",29)); }
-   });
+    tentativetag6.innerHTML=csvtext.substring(getPosition(csvtext,",",28)+1,getPosition(csvtext,",",29)); };
 
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativedate7.innerHTML=csvtext.substring(getPosition(csvtext,",",29)+1,getPosition(csvtext,",",30)));
- 
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativeofficer7.innerHTML=csvtext.substring(getPosition(csvtext,",",30)+1,getPosition(csvtext,",",31)));
-
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativedsa7.innerHTML=csvtext.substring(getPosition(csvtext,",",31)+1,getPosition(csvtext,",",32)));
-
-  fetch(url2)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",32)+1,getPosition(csvtext,",",33)) === "") {
+    tentativedate7.innerHTML=csvtext.substring(getPosition(csvtext,",",29)+1,getPosition(csvtext,",",30));
+    tentativeofficer7.innerHTML=csvtext.substring(getPosition(csvtext,",",30)+1,getPosition(csvtext,",",31));
+    tentativedsa7.innerHTML=csvtext.substring(getPosition(csvtext,",",31)+1,getPosition(csvtext,",",32));
+    if(csvtext.substring(getPosition(csvtext,",",32)+1,getPosition(csvtext,",",33)) === "") {
     tentativerow7.style.display = "none"; }
     else {
-    tentativetag7.innerHTML=csvtext.substring(getPosition(csvtext,",",32)+1,getPosition(csvtext,",",33)); }
-   });
+    tentativetag7.innerHTML=csvtext.substring(getPosition(csvtext,",",32)+1,getPosition(csvtext,",",33)); };
 
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativedate8.innerHTML=csvtext.substring(getPosition(csvtext,",",33)+1,getPosition(csvtext,",",34)));
- 
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativeofficer8.innerHTML=csvtext.substring(getPosition(csvtext,",",34)+1,getPosition(csvtext,",",35)));
-
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativedsa8.innerHTML=csvtext.substring(getPosition(csvtext,",",35)+1,getPosition(csvtext,",",36)));
-
-  fetch(url2)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",36)+1,getPosition(csvtext,",",37)) === "") {
+    tentativedate8.innerHTML=csvtext.substring(getPosition(csvtext,",",33)+1,getPosition(csvtext,",",34));
+    tentativeofficer8.innerHTML=csvtext.substring(getPosition(csvtext,",",34)+1,getPosition(csvtext,",",35));
+    tentativedsa8.innerHTML=csvtext.substring(getPosition(csvtext,",",35)+1,getPosition(csvtext,",",36));
+    if(csvtext.substring(getPosition(csvtext,",",36)+1,getPosition(csvtext,",",37)) === "") {
     tentativerow8.style.display = "none"; }
     else {
-    tentativetag8.innerHTML=csvtext.substring(getPosition(csvtext,",",36)+1,getPosition(csvtext,",",37)); }
-   });
+    tentativetag8.innerHTML=csvtext.substring(getPosition(csvtext,",",36)+1,getPosition(csvtext,",",37)); };
 
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativedate9.innerHTML=csvtext.substring(getPosition(csvtext,",",37)+1,getPosition(csvtext,",",38)));
- 
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativeofficer9.innerHTML=csvtext.substring(getPosition(csvtext,",",38)+1,getPosition(csvtext,",",39)));
-
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativedsa9.innerHTML=csvtext.substring(getPosition(csvtext,",",39)+1,getPosition(csvtext,",",40)));
-
-  fetch(url2)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",40)+1,getPosition(csvtext,",",41)) === "") {
+    tentativedate9.innerHTML=csvtext.substring(getPosition(csvtext,",",37)+1,getPosition(csvtext,",",38));
+    tentativeofficer9.innerHTML=csvtext.substring(getPosition(csvtext,",",38)+1,getPosition(csvtext,",",39));
+    tentativedsa9.innerHTML=csvtext.substring(getPosition(csvtext,",",39)+1,getPosition(csvtext,",",40));
+    if(csvtext.substring(getPosition(csvtext,",",40)+1,getPosition(csvtext,",",41)) === "") {
     tentativerow9.style.display = "none"; }
     else {
-    tentativetag9.innerHTML=csvtext.substring(getPosition(csvtext,",",40)+1,getPosition(csvtext,",",41)); }
-   });
+    tentativetag9.innerHTML=csvtext.substring(getPosition(csvtext,",",40)+1,getPosition(csvtext,",",41)); };
 
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativedate10.innerHTML=csvtext.substring(getPosition(csvtext,",",41)+1,getPosition(csvtext,",",42)));
-  
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativeofficer10.innerHTML=csvtext.substring(getPosition(csvtext,",",42)+1,getPosition(csvtext,",",43)));
-
-  fetch(url2)
-   .then(result=>result.text())
-   .then(csvtext=>tentativedsa10.innerHTML=csvtext.substring(getPosition(csvtext,",",43)+1,getPosition(csvtext,",",44)));
-
-  fetch(url2)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",44)+1,getPosition(csvtext,",",45)) === "") {
+    tentativedate10.innerHTML=csvtext.substring(getPosition(csvtext,",",41)+1,getPosition(csvtext,",",42));
+    tentativeofficer10.innerHTML=csvtext.substring(getPosition(csvtext,",",42)+1,getPosition(csvtext,",",43));
+    tentativedsa10.innerHTML=csvtext.substring(getPosition(csvtext,",",43)+1,getPosition(csvtext,",",44));
+    if(csvtext.substring(getPosition(csvtext,",",44)+1,getPosition(csvtext,",",45)) === "") {
     tentativerow10.style.display = "none"; }
     else {
-    tentativetag10.innerHTML=csvtext.substring(getPosition(csvtext,",",44)+1,getPosition(csvtext,",",45)); }
+    tentativetag10.innerHTML=csvtext.substring(getPosition(csvtext,",",44)+1,getPosition(csvtext,",",45)); };
+
    });
 
   const futuredate1 = document.querySelector("#futuredate1");
@@ -872,6 +704,46 @@
   const futureofficer10 = document.querySelector("#futureofficer10");
   const futuredsa10 = document.querySelector("#futuredsa10");
   const futuretag10 = document.querySelector("#futuretag10");
+  const futuredate11 = document.querySelector("#futuredate11");
+  const futureofficer11 = document.querySelector("#futureofficer11");
+  const futuredsa11 = document.querySelector("#futuredsa11");
+  const futuretag11 = document.querySelector("#futuretag11");
+  const futuredate12 = document.querySelector("#futuredate12");
+  const futureofficer12 = document.querySelector("#futureofficer12");
+  const futuredsa12 = document.querySelector("#futuredsa12");
+  const futuretag12 = document.querySelector("#futuretag12");
+  const futuredate13 = document.querySelector("#futuredate13");
+  const futureofficer13 = document.querySelector("#futureofficer13");
+  const futuredsa13 = document.querySelector("#futuredsa13");
+  const futuretag13 = document.querySelector("#futuretag13");
+  const futuredate14 = document.querySelector("#futuredate14");
+  const futureofficer14 = document.querySelector("#futureofficer14");
+  const futuredsa14 = document.querySelector("#futuredsa14");
+  const futuretag14 = document.querySelector("#futuretag14");
+  const futuredate15 = document.querySelector("#futuredate15");
+  const futureofficer15 = document.querySelector("#futureofficer15");
+  const futuredsa15 = document.querySelector("#futuredsa15");
+  const futuretag15 = document.querySelector("#futuretag15");
+  const futuredate16 = document.querySelector("#futuredate16");
+  const futureofficer16 = document.querySelector("#futureofficer16");
+  const futuredsa16 = document.querySelector("#futuredsa16");
+  const futuretag16 = document.querySelector("#futuretag16");
+  const futuredate17 = document.querySelector("#futuredate17");
+  const futureofficer17 = document.querySelector("#futureofficer17");
+  const futuredsa17 = document.querySelector("#futuredsa17");
+  const futuretag17 = document.querySelector("#futuretag17");
+  const futuredate18 = document.querySelector("#futuredate18");
+  const futureofficer18 = document.querySelector("#futureofficer18");
+  const futuredsa18 = document.querySelector("#futuredsa18");
+  const futuretag18 = document.querySelector("#futuretag18");
+  const futuredate19 = document.querySelector("#futuredate19");
+  const futureofficer19 = document.querySelector("#futureofficer19");
+  const futuredsa19 = document.querySelector("#futuredsa19");
+  const futuretag19 = document.querySelector("#futuretag19");
+  const futuredate20 = document.querySelector("#futuredate20");
+  const futureofficer20 = document.querySelector("#futureofficer20");
+  const futuredsa20 = document.querySelector("#futuredsa20");
+  const futuretag20 = document.querySelector("#futuretag20");
   futuredate1.innerHTML = "<p>Sedang Dimuatkan...</p>"
   futureofficer1.innerHTML = "<p>Sedang Dimuatkan...</p>"
   futuredsa1.innerHTML = "<p>Sedang Dimuatkan...</p>"
@@ -912,6 +784,46 @@
   futureofficer10.innerHTML = "<p>Sedang Dimuatkan...</p>"
   futuredsa10.innerHTML = "<p>Sedang Dimuatkan...</p>"
   futuretag10.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuredate11.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futureofficer11.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuredsa11.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuretag11.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuredate12.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futureofficer12.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuredsa12.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuretag12.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuredate13.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futureofficer13.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuredsa13.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuretag13.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuredate14.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futureofficer14.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuredsa14.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuretag14.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuredate15.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futureofficer15.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuredsa15.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuretag15.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuredate16.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futureofficer16.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuredsa16.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuretag16.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuredate17.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futureofficer17.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuredsa17.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuretag17.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuredate18.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futureofficer18.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuredsa18.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuretag18.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuredate19.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futureofficer19.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuredsa19.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuretag19.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuredate20.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futureofficer20.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuredsa20.innerHTML = "<p>Sedang Dimuatkan...</p>"
+  futuretag20.innerHTML = "<p>Sedang Dimuatkan...</p>"
   const futurerow1 = document.getElementById("futurerow1");
   const futurerow2 = document.getElementById("futurerow2");
   const futurerow3 = document.getElementById("futurerow3");
@@ -922,233 +834,181 @@
   const futurerow8 = document.getElementById("futurerow8");
   const futurerow9 = document.getElementById("futurerow9");
   const futurerow10 = document.getElementById("futurerow10");
+  const futurerow11 = document.getElementById("futurerow11");
+  const futurerow12 = document.getElementById("futurerow12");
+  const futurerow13 = document.getElementById("futurerow13");
+  const futurerow14 = document.getElementById("futurerow14");
+  const futurerow15 = document.getElementById("futurerow15");
+  const futurerow16 = document.getElementById("futurerow16");
+  const futurerow17 = document.getElementById("futurerow17");
+  const futurerow18 = document.getElementById("futurerow18");
+  const futurerow19 = document.getElementById("futurerow19");
+  const futurerow20 = document.getElementById("futurerow20");
 
   fetch(url3)
    .then(result=>result.text())
-   .then(csvtext=>futuredate1.innerHTML=csvtext.substring(getPosition(csvtext,",",5)+1,getPosition(csvtext,",",6)));
- 
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futureofficer1.innerHTML=csvtext.substring(getPosition(csvtext,",",6)+1,getPosition(csvtext,",",7)));
+   .then(function(csvtext){
 
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futuredsa1.innerHTML=csvtext.substring(getPosition(csvtext,",",7)+1,getPosition(csvtext,",",8)));
-
-  fetch(url3)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",8)+1,getPosition(csvtext,",",9)) === "") {
+    futuredate1.innerHTML=csvtext.substring(getPosition(csvtext,",",5)+1,getPosition(csvtext,",",6));
+    futureofficer1.innerHTML=csvtext.substring(getPosition(csvtext,",",6)+1,getPosition(csvtext,",",7));
+    futuredsa1.innerHTML=csvtext.substring(getPosition(csvtext,",",7)+1,getPosition(csvtext,",",8));
+    if(csvtext.substring(getPosition(csvtext,",",8)+1,getPosition(csvtext,",",9)) === "") {
     futurerow1.style.display = "none"; }
     else {
-    futuretag1.innerHTML=csvtext.substring(getPosition(csvtext,",",8)+1,getPosition(csvtext,",",9)); }
-   });
+    futuretag1.innerHTML=csvtext.substring(getPosition(csvtext,",",8)+1,getPosition(csvtext,",",9)); };
 
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futuredate2.innerHTML=csvtext.substring(getPosition(csvtext,",",9)+1,getPosition(csvtext,",",10)));
- 
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futureofficer2.innerHTML=csvtext.substring(getPosition(csvtext,",",10)+1,getPosition(csvtext,",",11)));
-
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futuredsa2.innerHTML=csvtext.substring(getPosition(csvtext,",",11)+1,getPosition(csvtext,",",12)));
-
-  fetch(url3)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",12)+1,getPosition(csvtext,",",13)) === "") {
+    futuredate2.innerHTML=csvtext.substring(getPosition(csvtext,",",9)+1,getPosition(csvtext,",",10));
+    futureofficer2.innerHTML=csvtext.substring(getPosition(csvtext,",",10)+1,getPosition(csvtext,",",11));
+    futuredsa2.innerHTML=csvtext.substring(getPosition(csvtext,",",11)+1,getPosition(csvtext,",",12));
+    if(csvtext.substring(getPosition(csvtext,",",12)+1,getPosition(csvtext,",",13)) === "") {
     futurerow2.style.display = "none"; }
     else {
-    futuretag2.innerHTML=csvtext.substring(getPosition(csvtext,",",12)+1,getPosition(csvtext,",",13)); }
-   });
+    futuretag2.innerHTML=csvtext.substring(getPosition(csvtext,",",12)+1,getPosition(csvtext,",",13)); };
 
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futuredate3.innerHTML=csvtext.substring(getPosition(csvtext,",",13)+1,getPosition(csvtext,",",14)));
- 
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futureofficer3.innerHTML=csvtext.substring(getPosition(csvtext,",",14)+1,getPosition(csvtext,",",15)));
-
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futuredsa3.innerHTML=csvtext.substring(getPosition(csvtext,",",15)+1,getPosition(csvtext,",",16)));
-
-  fetch(url3)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",16)+1,getPosition(csvtext,",",17)) === "") {
+    futuredate3.innerHTML=csvtext.substring(getPosition(csvtext,",",13)+1,getPosition(csvtext,",",14));
+    futureofficer3.innerHTML=csvtext.substring(getPosition(csvtext,",",14)+1,getPosition(csvtext,",",15));
+    futuredsa3.innerHTML=csvtext.substring(getPosition(csvtext,",",15)+1,getPosition(csvtext,",",16));
+    if(csvtext.substring(getPosition(csvtext,",",16)+1,getPosition(csvtext,",",17)) === "") {
     futurerow3.style.display = "none"; }
     else {
-    futuretag3.innerHTML=csvtext.substring(getPosition(csvtext,",",16)+1,getPosition(csvtext,",",17)); }
-   });
+    futuretag3.innerHTML=csvtext.substring(getPosition(csvtext,",",16)+1,getPosition(csvtext,",",17)); };
 
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futuredate4.innerHTML=csvtext.substring(getPosition(csvtext,",",17)+1,getPosition(csvtext,",",18)));
- 
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futureofficer4.innerHTML=csvtext.substring(getPosition(csvtext,",",18)+1,getPosition(csvtext,",",19)));
-
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futuredsa4.innerHTML=csvtext.substring(getPosition(csvtext,",",19)+1,getPosition(csvtext,",",20)));
-
-  fetch(url3)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",20)+1,getPosition(csvtext,",",21)) === "") {
+    futuredate4.innerHTML=csvtext.substring(getPosition(csvtext,",",17)+1,getPosition(csvtext,",",18));
+    futureofficer4.innerHTML=csvtext.substring(getPosition(csvtext,",",18)+1,getPosition(csvtext,",",19));
+    futuredsa4.innerHTML=csvtext.substring(getPosition(csvtext,",",19)+1,getPosition(csvtext,",",20));
+    if(csvtext.substring(getPosition(csvtext,",",20)+1,getPosition(csvtext,",",21)) === "") {
     futurerow4.style.display = "none"; }
     else {
-    futuretag4.innerHTML=csvtext.substring(getPosition(csvtext,",",20)+1,getPosition(csvtext,",",21)); }
-   });
+    futuretag4.innerHTML=csvtext.substring(getPosition(csvtext,",",20)+1,getPosition(csvtext,",",21)); };
 
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futuredate5.innerHTML=csvtext.substring(getPosition(csvtext,",",21)+1,getPosition(csvtext,",",22)));
- 
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futureofficer5.innerHTML=csvtext.substring(getPosition(csvtext,",",22)+1,getPosition(csvtext,",",23)));
-
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futuredsa5.innerHTML=csvtext.substring(getPosition(csvtext,",",23)+1,getPosition(csvtext,",",24)));
-
-  fetch(url3)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",24)+1,getPosition(csvtext,",",25)) === "") {
+    futuredate5.innerHTML=csvtext.substring(getPosition(csvtext,",",21)+1,getPosition(csvtext,",",22));
+    futureofficer5.innerHTML=csvtext.substring(getPosition(csvtext,",",22)+1,getPosition(csvtext,",",23));
+    futuredsa5.innerHTML=csvtext.substring(getPosition(csvtext,",",23)+1,getPosition(csvtext,",",24));
+    if(csvtext.substring(getPosition(csvtext,",",24)+1,getPosition(csvtext,",",25)) === "") {
     futurerow5.style.display = "none"; }
     else {
-    futuretag5.innerHTML=csvtext.substring(getPosition(csvtext,",",24)+1,getPosition(csvtext,",",25)); }
-   });
+    futuretag5.innerHTML=csvtext.substring(getPosition(csvtext,",",24)+1,getPosition(csvtext,",",25)); };
 
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futuredate6.innerHTML=csvtext.substring(getPosition(csvtext,",",25)+1,getPosition(csvtext,",",26)));
- 
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futureofficer6.innerHTML=csvtext.substring(getPosition(csvtext,",",26)+1,getPosition(csvtext,",",27)));
-
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futuredsa6.innerHTML=csvtext.substring(getPosition(csvtext,",",27)+1,getPosition(csvtext,",",28)));
-
-  fetch(url3)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",28)+1,getPosition(csvtext,",",29)) === "") {
+    futuredate6.innerHTML=csvtext.substring(getPosition(csvtext,",",25)+1,getPosition(csvtext,",",26));
+    futureofficer6.innerHTML=csvtext.substring(getPosition(csvtext,",",26)+1,getPosition(csvtext,",",27));
+    futuredsa6.innerHTML=csvtext.substring(getPosition(csvtext,",",27)+1,getPosition(csvtext,",",28));
+    if(csvtext.substring(getPosition(csvtext,",",28)+1,getPosition(csvtext,",",29)) === "") {
     futurerow6.style.display = "none"; }
     else {
-    futuretag6.innerHTML=csvtext.substring(getPosition(csvtext,",",28)+1,getPosition(csvtext,",",29)); }
-   });
+    futuretag6.innerHTML=csvtext.substring(getPosition(csvtext,",",28)+1,getPosition(csvtext,",",29)); };
 
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futuredate7.innerHTML=csvtext.substring(getPosition(csvtext,",",29)+1,getPosition(csvtext,",",30)));
- 
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futureofficer7.innerHTML=csvtext.substring(getPosition(csvtext,",",30)+1,getPosition(csvtext,",",31)));
-
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futuredsa7.innerHTML=csvtext.substring(getPosition(csvtext,",",31)+1,getPosition(csvtext,",",32)));
-
-  fetch(url3)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",32)+1,getPosition(csvtext,",",33)) === "") {
+    futuredate7.innerHTML=csvtext.substring(getPosition(csvtext,",",29)+1,getPosition(csvtext,",",30));
+    futureofficer7.innerHTML=csvtext.substring(getPosition(csvtext,",",30)+1,getPosition(csvtext,",",31));
+    futuredsa7.innerHTML=csvtext.substring(getPosition(csvtext,",",31)+1,getPosition(csvtext,",",32));
+    if(csvtext.substring(getPosition(csvtext,",",32)+1,getPosition(csvtext,",",33)) === "") {
     futurerow7.style.display = "none"; }
     else {
-    futuretag7.innerHTML=csvtext.substring(getPosition(csvtext,",",32)+1,getPosition(csvtext,",",33)); }
-   });
+    futuretag7.innerHTML=csvtext.substring(getPosition(csvtext,",",32)+1,getPosition(csvtext,",",33)); };
 
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futuredate8.innerHTML=csvtext.substring(getPosition(csvtext,",",33)+1,getPosition(csvtext,",",34)));
- 
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futureofficer8.innerHTML=csvtext.substring(getPosition(csvtext,",",34)+1,getPosition(csvtext,",",35)));
-
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futuredsa8.innerHTML=csvtext.substring(getPosition(csvtext,",",35)+1,getPosition(csvtext,",",36)));
-
-  fetch(url3)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",36)+1,getPosition(csvtext,",",37)) === "") {
+    futuredate8.innerHTML=csvtext.substring(getPosition(csvtext,",",33)+1,getPosition(csvtext,",",34));
+    futureofficer8.innerHTML=csvtext.substring(getPosition(csvtext,",",34)+1,getPosition(csvtext,",",35));
+    futuredsa8.innerHTML=csvtext.substring(getPosition(csvtext,",",35)+1,getPosition(csvtext,",",36));
+    if(csvtext.substring(getPosition(csvtext,",",36)+1,getPosition(csvtext,",",37)) === "") {
     futurerow8.style.display = "none"; }
     else {
-    futuretag8.innerHTML=csvtext.substring(getPosition(csvtext,",",36)+1,getPosition(csvtext,",",37)); }
-   });
+    futuretag8.innerHTML=csvtext.substring(getPosition(csvtext,",",36)+1,getPosition(csvtext,",",37)); };
 
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futuredate9.innerHTML=csvtext.substring(getPosition(csvtext,",",37)+1,getPosition(csvtext,",",38)));
- 
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futureofficer9.innerHTML=csvtext.substring(getPosition(csvtext,",",38)+1,getPosition(csvtext,",",39)));
-
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futuredsa9.innerHTML=csvtext.substring(getPosition(csvtext,",",39)+1,getPosition(csvtext,",",40)));
-
-  fetch(url3)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",40)+1,getPosition(csvtext,",",41)) === "") {
+    futuredate9.innerHTML=csvtext.substring(getPosition(csvtext,",",37)+1,getPosition(csvtext,",",38));
+    futureofficer9.innerHTML=csvtext.substring(getPosition(csvtext,",",38)+1,getPosition(csvtext,",",39));
+    futuredsa9.innerHTML=csvtext.substring(getPosition(csvtext,",",39)+1,getPosition(csvtext,",",40));
+    if(csvtext.substring(getPosition(csvtext,",",40)+1,getPosition(csvtext,",",41)) === "") {
     futurerow9.style.display = "none"; }
     else {
-    futuretag9.innerHTML=csvtext.substring(getPosition(csvtext,",",40)+1,getPosition(csvtext,",",41)); }
-   });
+    futuretag9.innerHTML=csvtext.substring(getPosition(csvtext,",",40)+1,getPosition(csvtext,",",41)); };
 
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futuredate10.innerHTML=csvtext.substring(getPosition(csvtext,",",41)+1,getPosition(csvtext,",",42)));
-  
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futureofficer10.innerHTML=csvtext.substring(getPosition(csvtext,",",42)+1,getPosition(csvtext,",",43)));
-
-  fetch(url3)
-   .then(result=>result.text())
-   .then(csvtext=>futuredsa10.innerHTML=csvtext.substring(getPosition(csvtext,",",43)+1,getPosition(csvtext,",",44)));
-
-  fetch(url3)
-   .then(function(result) {return result.text()})
-   .then(function(csvtext) {if(csvtext.substring(getPosition(csvtext,",",44)+1,getPosition(csvtext,",",45)) === "") {
+    futuredate10.innerHTML=csvtext.substring(getPosition(csvtext,",",41)+1,getPosition(csvtext,",",42));
+    futureofficer10.innerHTML=csvtext.substring(getPosition(csvtext,",",42)+1,getPosition(csvtext,",",43));
+    futuredsa10.innerHTML=csvtext.substring(getPosition(csvtext,",",43)+1,getPosition(csvtext,",",44));
+    if(csvtext.substring(getPosition(csvtext,",",44)+1,getPosition(csvtext,",",45)) === "") {
     futurerow10.style.display = "none"; }
     else {
-    futuretag10.innerHTML=csvtext.substring(getPosition(csvtext,",",44)+1,getPosition(csvtext,",",45)); }
+    futuretag10.innerHTML=csvtext.substring(getPosition(csvtext,",",44)+1,getPosition(csvtext,",",45)); };
+
+    futuredate11.innerHTML=csvtext.substring(getPosition(csvtext,",",45)+1,getPosition(csvtext,",",46));
+    futureofficer11.innerHTML=csvtext.substring(getPosition(csvtext,",",46)+1,getPosition(csvtext,",",47));
+    futuredsa11.innerHTML=csvtext.substring(getPosition(csvtext,",",47)+1,getPosition(csvtext,",",48));
+    if(csvtext.substring(getPosition(csvtext,",",48)+1,getPosition(csvtext,",",49)) === "") {
+    futurerow11.style.display = "none"; }
+    else {
+    futuretag11.innerHTML=csvtext.substring(getPosition(csvtext,",",48)+1,getPosition(csvtext,",",49)); };
+
+    futuredate12.innerHTML=csvtext.substring(getPosition(csvtext,",",49)+1,getPosition(csvtext,",",50));
+    futureofficer12.innerHTML=csvtext.substring(getPosition(csvtext,",",50)+1,getPosition(csvtext,",",51));
+    futuredsa12.innerHTML=csvtext.substring(getPosition(csvtext,",",51)+1,getPosition(csvtext,",",52));
+    if(csvtext.substring(getPosition(csvtext,",",52)+1,getPosition(csvtext,",",53)) === "") {
+    futurerow12.style.display = "none"; }
+    else {
+    futuretag12.innerHTML=csvtext.substring(getPosition(csvtext,",",52)+1,getPosition(csvtext,",",53)); };
+
+    futuredate13.innerHTML=csvtext.substring(getPosition(csvtext,",",53)+1,getPosition(csvtext,",",54));
+    futureofficer13.innerHTML=csvtext.substring(getPosition(csvtext,",",54)+1,getPosition(csvtext,",",55));
+    futuredsa13.innerHTML=csvtext.substring(getPosition(csvtext,",",55)+1,getPosition(csvtext,",",56));
+    if(csvtext.substring(getPosition(csvtext,",",56)+1,getPosition(csvtext,",",57)) === "") {
+    futurerow13.style.display = "none"; }
+    else {
+    futuretag13.innerHTML=csvtext.substring(getPosition(csvtext,",",56)+1,getPosition(csvtext,",",57)); };
+
+    futuredate14.innerHTML=csvtext.substring(getPosition(csvtext,",",57)+1,getPosition(csvtext,",",58));
+    futureofficer14.innerHTML=csvtext.substring(getPosition(csvtext,",",58)+1,getPosition(csvtext,",",59));
+    futuredsa14.innerHTML=csvtext.substring(getPosition(csvtext,",",59)+1,getPosition(csvtext,",",60));
+    if(csvtext.substring(getPosition(csvtext,",",60)+1,getPosition(csvtext,",",61)) === "") {
+    futurerow14.style.display = "none"; }
+    else {
+    futuretag14.innerHTML=csvtext.substring(getPosition(csvtext,",",60)+1,getPosition(csvtext,",",61)); };
+
+    futuredate15.innerHTML=csvtext.substring(getPosition(csvtext,",",61)+1,getPosition(csvtext,",",62));
+    futureofficer15.innerHTML=csvtext.substring(getPosition(csvtext,",",62)+1,getPosition(csvtext,",",63));
+    futuredsa15.innerHTML=csvtext.substring(getPosition(csvtext,",",63)+1,getPosition(csvtext,",",64));
+    if(csvtext.substring(getPosition(csvtext,",",64)+1,getPosition(csvtext,",",65)) === "") {
+    futurerow15.style.display = "none"; }
+    else {
+    futuretag15.innerHTML=csvtext.substring(getPosition(csvtext,",",64)+1,getPosition(csvtext,",",65)); };
+
+    futuredate16.innerHTML=csvtext.substring(getPosition(csvtext,",",65)+1,getPosition(csvtext,",",66));
+    futureofficer16.innerHTML=csvtext.substring(getPosition(csvtext,",",66)+1,getPosition(csvtext,",",67));
+    futuredsa16.innerHTML=csvtext.substring(getPosition(csvtext,",",67)+1,getPosition(csvtext,",",68));
+    if(csvtext.substring(getPosition(csvtext,",",68)+1,getPosition(csvtext,",",69)) === "") {
+    futurerow16.style.display = "none"; }
+    else {
+    futuretag16.innerHTML=csvtext.substring(getPosition(csvtext,",",68)+1,getPosition(csvtext,",",69)); };
+
+    futuredate17.innerHTML=csvtext.substring(getPosition(csvtext,",",69)+1,getPosition(csvtext,",",70));
+    futureofficer17.innerHTML=csvtext.substring(getPosition(csvtext,",",70)+1,getPosition(csvtext,",",71));
+    futuredsa17.innerHTML=csvtext.substring(getPosition(csvtext,",",71)+1,getPosition(csvtext,",",72));
+    if(csvtext.substring(getPosition(csvtext,",",72)+1,getPosition(csvtext,",",73)) === "") {
+    futurerow17.style.display = "none"; }
+    else {
+    futuretag17.innerHTML=csvtext.substring(getPosition(csvtext,",",72)+1,getPosition(csvtext,",",73)); };
+
+    futuredate18.innerHTML=csvtext.substring(getPosition(csvtext,",",73)+1,getPosition(csvtext,",",74));
+    futureofficer18.innerHTML=csvtext.substring(getPosition(csvtext,",",74)+1,getPosition(csvtext,",",75));
+    futuredsa18.innerHTML=csvtext.substring(getPosition(csvtext,",",75)+1,getPosition(csvtext,",",76));
+    if(csvtext.substring(getPosition(csvtext,",",76)+1,getPosition(csvtext,",",77)) === "") {
+    futurerow18.style.display = "none"; }
+    else {
+    futuretag18.innerHTML=csvtext.substring(getPosition(csvtext,",",76)+1,getPosition(csvtext,",",77)); };
+
+    futuredate19.innerHTML=csvtext.substring(getPosition(csvtext,",",77)+1,getPosition(csvtext,",",78));
+    futureofficer19.innerHTML=csvtext.substring(getPosition(csvtext,",",78)+1,getPosition(csvtext,",",79));
+    futuredsa19.innerHTML=csvtext.substring(getPosition(csvtext,",",79)+1,getPosition(csvtext,",",80));
+    if(csvtext.substring(getPosition(csvtext,",",80)+1,getPosition(csvtext,",",81)) === "") {
+    futurerow19.style.display = "none"; }
+    else {
+    futuretag19.innerHTML=csvtext.substring(getPosition(csvtext,",",80)+1,getPosition(csvtext,",",81)); };
+
+    futuredate20.innerHTML=csvtext.substring(getPosition(csvtext,",",81)+1,getPosition(csvtext,",",82));
+    futureofficer20.innerHTML=csvtext.substring(getPosition(csvtext,",",82)+1,getPosition(csvtext,",",83));
+    futuredsa20.innerHTML=csvtext.substring(getPosition(csvtext,",",83)+1,getPosition(csvtext,",",84));
+    if(csvtext.substring(getPosition(csvtext,",",84)+1,getPosition(csvtext,",",85)) === "") {
+    futurerow20.style.display = "none"; }
+    else {
+    futuretag20.innerHTML=csvtext.substring(getPosition(csvtext,",",84)+1,getPosition(csvtext,",",85)); };
+
    });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
 </script>
