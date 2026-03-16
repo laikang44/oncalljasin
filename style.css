@@ -26,106 +26,240 @@ h2 {
   opacity: 1;
 }
 
+.changes {
+  font-size: 0.8rem;
+  text-align: center;
+  color: red;
+}
+
+.important {
+  font-weight: bold;
+}
+
 #head {
-    font-size: 1rem;
-    text-align: center;
-    font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: bold;
 }
 
 button {
-    width: 70%;
-    height: 2rem;
+  width: 70%;
+  height: 2rem;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
   border-collapse: collapse;
   font-size: 0.6rem;
 }
 
-th, td {
+th,
+td {
   padding: 0.2rem;
   text-align: center;
 }
 
-#table1, #table2, #table3 {
-  margin-left: auto; 
+#table1,
+#table2,
+#table3 {
+  margin-left: auto;
   margin-right: auto;
-  width: 80%
+  width: 80%;
 }
 
 @media screen and (min-width: 600px) {
   h1 {
-  font-size: 2.5rem;
-  position: relative;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  font-weight: bold;
-  text-align: center;
-}
+    font-size: 2.5rem;
+    position: relative;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
 
-#notes {
-  font-size: 1.2rem;
-  text-align: center;
-  color: red;
-  position: sticky;
-  top: 0;
-  background-color: rgb(255, 255, 255);
-  opacity: 1;
-}
+  #notes {
+    font-size: 1.2rem;
+    text-align: center;
+    color: red;
+    position: sticky;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
+  }
 
-#head {
+  .changes {
+    font-size: 1.2rem;
+    text-align: center;
+    color: red;
+  }
+
+  #head {
     font-size: 1.8rem;
     text-align: center;
     font-weight: bold;
-}
+  }
 
-button {
+  button {
     width: 70%;
     height: 2.5rem;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: 1rem;
+  }
+
+  th,
+  td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    text-align: center;
+  }
+
+  #table1,
+  #table2,
+  #table3 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
 }
 
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  font-size: 1rem;
+#officialdate1,
+#officialdate2,
+#officialdate3,
+#officialdate4,
+#officialdate5,
+#officialdate6,
+#officialdate7,
+#officialdate8,
+#officialdate9,
+#officialdate10,
+_ #tentativedate1,
+#tentativedate2,
+#tentativedate3,
+#tentativedate4,
+#tentativedate5,
+#tentativedate6,
+#tentativedate7,
+#tentativedate8,
+#tentativedate9,
+#tentativedate10,
+_ #futuredate1,
+#futuredate2,
+#futuredate3,
+#futuredate4,
+#futuredate5,
+#futuredate6,
+#futuredate7,
+#futuredate8,
+#futuredate9,
+#futuredate10 {
+  width: 10%;
 }
 
-th, td {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 0.3rem;
-  padding-right: 0.3rem;
-  text-align: center;
+#officialofficer1,
+#officialofficer2,
+#officialofficer3,
+#officialofficer4,
+#officialofficer5,
+#officialofficer6,
+#officialofficer7,
+#officialofficer8,
+#officialofficer9,
+#officialofficer10,
+_ #tentativeofficer1,
+#tentativeofficer2,
+#tentativeofficer3,
+#tentativeofficer4,
+#tentativeofficer5,
+#tentativeofficer6,
+#tentativeofficer7,
+#tentativeofficer8,
+#tentativeofficer9,
+#tentativeofficer10,
+_ #futureofficer1,
+#futureofficer2,
+#futureofficer3,
+#futureofficer4,
+#futureofficer5,
+#futureofficer6,
+#futureofficer7,
+#futureofficer8,
+#futureofficer9,
+#futureofficer10 {
+  width: 30%;
 }
 
-#table1, #table2, #table3 {
-  margin-left: auto; 
-  margin-right: auto;
-  width: 80%
-}
+#officialdsa1,
+#officialdsa2,
+#officialdsa3,
+#officialdsa4,
+#officialdsa5,
+#officialdsa6,
+#officialdsa7,
+#officialdsa8,
+#officialdsa9,
+#officialdsa10,
+_ #tentativedsa1,
+#tentativedsa2,
+#tentativedsa3,
+#tentativedsa4,
+#tentativedsa5,
+#tentativedsa6,
+#tentativedsa7,
+#tentativedsa8,
+#tentativedsa9,
+#tentativedsa10,
+_ #futuredsa1,
+#futuredsa2,
+#futuredsa3,
+#futuredsa4,
+#futuredsa5,
+#futuredsa6,
+#futuredsa7,
+#futuredsa8,
+#futuredsa9,
+#futuredsa10 {
+  width: 30%;
 }
 
-#officialdate1, #officialdate2, #officialdate3, #officialdate4, #officialdate5, #officialdate6, #officialdate7, #officialdate8,#officialdate9, #officialdate10,_
-#tentativedate1, #tentativedate2, #tentativedate3, #tentativedate4, #tentativedate5, #tentativedate6, #tentativedate7, #tentativedate8,#tentativedate9, #tentativedate10,_
-#futuredate1, #futuredate2, #futuredate3, #futuredate4, #futuredate5, #futuredate6, #futuredate7, #futuredate8,#futuredate9, #futuredate10 {
-  width: 10%
-}
-
-#officialofficer1, #officialofficer2, #officialofficer3, #officialofficer4, #officialofficer5, #officialofficer6, #officialofficer7, #officialofficer8,#officialofficer9, #officialofficer10,_
-#tentativeofficer1, #tentativeofficer2, #tentativeofficer3, #tentativeofficer4, #tentativeofficer5, #tentativeofficer6, #tentativeofficer7, #tentativeofficer8,#tentativeofficer9, #tentativeofficer10,_
-#futureofficer1, #futureofficer2, #futureofficer3, #futureofficer4, #futureofficer5, #futureofficer6, #futureofficer7, #futureofficer8,#futureofficer9, #futureofficer10 {
-  width: 30%
-}
-
-#officialdsa1, #officialdsa2, #officialdsa3, #officialdsa4, #officialdsa5, #officialdsa6, #officialdsa7, #officialdsa8,#officialdsa9, #officialdsa10,_
-#tentativedsa1, #tentativedsa2, #tentativedsa3, #tentativedsa4, #tentativedsa5, #tentativedsa6, #tentativedsa7, #tentativedsa8,#tentativedsa9, #tentativedsa10,_
-#futuredsa1, #futuredsa2, #futuredsa3, #futuredsa4, #futuredsa5, #futuredsa6, #futuredsa7, #futuredsa8,#futuredsa9, #futuredsa10 {
-  width: 30%
-}
-
-#officialtag1, #officialtag2, #officialtag3, #officialtag4, #officialtag5, #officialtag6, #officialtag7, #officialtag8,#officialtag9, #officialtag10,_
-#tentativetag1, #tentativetag2, #tentativetag3, #tentativetag4, #tentativetag5, #tentativetag6, #tentativetag7, #tentativetag8,#tentativetag9, #tentativetag10,_
-#futuretag1, #futuretag2, #futuretag3, #futuretag4, #futuretag5, #futuretag6, #futuretag7, #futuretag8,#futuretag9, #futuretag10 {
-  width: 30%
+#officialtag1,
+#officialtag2,
+#officialtag3,
+#officialtag4,
+#officialtag5,
+#officialtag6,
+#officialtag7,
+#officialtag8,
+#officialtag9,
+#officialtag10,
+_ #tentativetag1,
+#tentativetag2,
+#tentativetag3,
+#tentativetag4,
+#tentativetag5,
+#tentativetag6,
+#tentativetag7,
+#tentativetag8,
+#tentativetag9,
+#tentativetag10,
+_ #futuretag1,
+#futuretag2,
+#futuretag3,
+#futuretag4,
+#futuretag5,
+#futuretag6,
+#futuretag7,
+#futuretag8,
+#futuretag9,
+#futuretag10 {
+  width: 30%;
 }
